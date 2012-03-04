@@ -22,7 +22,7 @@ import java.io.File;
  * 
  * @author Ivan Zilotti Alencar
  */
-public class FileInfo {
+public class FileInfo extends NodeInfo {
 
 	/** Directory or file */
 	private File file;

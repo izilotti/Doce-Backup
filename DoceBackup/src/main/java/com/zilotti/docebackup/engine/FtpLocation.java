@@ -15,26 +15,50 @@
  */
 package com.zilotti.docebackup.engine;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
 import com.zilotti.docebackup.Location;
+import com.zilotti.docebackup.tree.Node;
+import com.zilotti.docebackup.tree.NodeInfo;
 
 public class FtpLocation<F extends FtpConfiguration> implements Location<F> {
 
-	/**
-	 * @see com.zilotti.docebackup.Location#setConfiguration(com.zilotti.docebackup.Configuration)
-	 */
-	@Override
+	public Node<NodeInfo> loadTree() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	public void setConfiguration(F configuration) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	/**
-	 * @see com.zilotti.docebackup.Location#getConfiguration()
-	 */
-	@Override
 	public F getConfiguration() {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	public void addFile(FileOutputStream fos) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void removeFile(FileOutputStream fos) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void replaceFile(FileOutputStream fos) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public FileInputStream readFile(String path, String fileName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
 	
 }

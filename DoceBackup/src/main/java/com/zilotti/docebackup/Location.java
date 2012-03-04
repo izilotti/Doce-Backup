@@ -15,12 +15,46 @@
  */
 package com.zilotti.docebackup;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+import com.zilotti.docebackup.tree.Node;
+import com.zilotti.docebackup.tree.NodeInfo;
+
 /**
  * @author Ivan Zilotti Alencar
  *
  * @param <C> Type of the location Configuration.
  */
 public interface Location<C extends Configuration> {
+	
+	/**
+	 * Loads a comparable tree of NodeInfos.
+	 * @return
+	 */
+	Node<NodeInfo> loadTree();
+	
+	/**
+	 * Sets the configuration of this location.
+	 * @param configuration
+	 */
 	void setConfiguration(C configuration);
+	
+	/**
+	 * Gets the configuration of this location.
+	 * @return
+	 */
 	C getConfiguration();
+
+	/**
+	 * Adds a file to this location
+	 * @param fileInfo
+	 */
+	void addFile(FileOutputStream fos);
+	
+	void removeFile(FileOutputStream fos);
+	
+	void replaceFile(FileOutputStream fos);
+	
+	FileInputStream readFile(String path, String fileName); 
 }

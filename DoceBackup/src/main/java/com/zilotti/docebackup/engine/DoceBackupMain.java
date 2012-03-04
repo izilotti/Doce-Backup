@@ -17,7 +17,7 @@ package com.zilotti.docebackup.engine;
 
 import com.zilotti.docebackup.BackupActivity;
 
-public class RapidBackupMain {
+public class DoceBackupMain {
 
 	public static void main(String[] args) {
 	
@@ -26,11 +26,18 @@ public class RapidBackupMain {
 			/**
 			 * @see com.zilotti.docebackup.BackupActivity#synchronize()
 			 */
-			public void synchronize() {
-				
+			public void synchronize() { // Template method?
+				// Thread 1 load source tree
+				// Thread 2 load destination tree
+				//--- Wait for the 2 threads to finish ---
+				// find deltas
+				// update deltas (add, replace, remove)
 			}
 		};
 		
+		
+//		activity.setSourceLocation(sourceLocation);
+//		activity.setDestinationLocation(destinationLocation);
 		activity.synchronize(); // PARADO AQUI
 	}
 }

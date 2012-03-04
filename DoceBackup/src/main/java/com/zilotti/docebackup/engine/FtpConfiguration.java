@@ -25,7 +25,7 @@ public class FtpConfiguration implements Configuration {
 	/**	Port number */
 	private String port;
 	
-	/**	Additional path */
+	/**	Initial path */
 	private String path;
 
 	/**	User name */
